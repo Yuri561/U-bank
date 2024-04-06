@@ -1,0 +1,26 @@
+.text{
+    color: whitesmoke;
+    font-size: 5rem;
+}
+.c-wrapper {
+    background: #1a1a2e;
+     /* Adjust colors as needed */
+    
+  }
+  
+.accordion{
+    --bs-accordion-btn-bg: whitesmoke;
+    --bs-accordion-bg: #1a1a2e;
+    --bs-accordion-color: white;
+    --bs-accordion-active-color: white;
+    --bs-accordion-btn-focus-box-shadow: none;
+
+}
+
+.accordion-button:not(.collapsed){
+    box-shadow: none;
+}
+
+accordion-body{
+    font-size: 2rem;
+}

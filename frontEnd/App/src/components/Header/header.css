@@ -1,0 +1,23 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+    font-family: "Oxygen", sans-serif;
+}
+
+.u_bank{
+    color: red;
+}
+.btn-group{
+    font-size: 5rem!important;
+}
+.btn-group, .btn-group:hover {
+    background-color: transparent;
+    color: #fff;
+    font-size: 15px;
+
+}
+
+.form-header{
+    justify-content: space-evenly;
+}
