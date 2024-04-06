@@ -5,7 +5,7 @@ import { Container, Navbar, Nav, NavDropdown, Form, Row, Col, Button } from 'rea
 const Header = () => {
   return (
     <>
-    <section className='d-grid'>
+    <section>
 
       <Navbar bg="dark" variant="dark" className='p-2 h-md-50' expand="lg">
         <Container fluid className='g-3'>
