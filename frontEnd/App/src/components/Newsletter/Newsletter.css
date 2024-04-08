@@ -1,0 +1,19 @@
+.btn{
+    margin-left: 4rem;
+}
+
+.newsletter-container{
+    background: linear-gradient(to right, #05052d, #111146);
+    
+}
+
+.left-text {
+    color: #50c878;
+    font-weight: bold;
+    font-size: 3.5rem;
+}
+
+.icon-news{
+    color: white;
+    font-size: 2rem;
+}

@@ -1,0 +1,35 @@
+.boxes-container{
+    background: linear-gradient(to right, #2c004d, #0d0d26);
+    padding-bottom: 5rem;
+
+}
+
+.card {
+    width: 20rem;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease; /* Add transition for smooth hover effect */
+  }
+  
+  .card:hover {
+    box-shadow: 0px 8px 20px rgb(255, 255, 255);
+    transform: translateY(-10px); /* Add some hover effects */
+    transition: transform 0.3s ease; /* Add transition for smooth hover effect */
+  }
+
+.card1{
+    background: linear-gradient(to right, #4b0082, #191970);
+
+}
+
+.card2{
+    background: linear-gradient(to right, #4b0082, #191970);
+}
+
+.card3{
+    background: linear-gradient(to right, #4b0082, #191970);
+}
+
+.btn{
+    margin-left: 1rem;
+}
+

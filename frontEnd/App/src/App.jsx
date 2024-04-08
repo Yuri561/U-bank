@@ -7,16 +7,22 @@ import './App.css'
 import Header from './components/Header/header';
 import Hero from './components/Hero/hero';
 import Currency from './components/Currency/Currency';
-import { motion } from "framer-motion"
+import Newsletter from './components/Newsletter/Newsletter';
+import Boxes from './components/Boxes/Boxes';
+import Footer from './components/Footer/Footer';
+
 
 
 function App() {
   return (
-    <motion.div className="App">
+    <div className="App">
       <Header/>
       <Hero/>
       <Currency/>
-    </motion.div>
+      <Newsletter/>
+      <Boxes/>
+      <Footer/>
+    </div>
   );
 }
 

@@ -20,7 +20,7 @@ const Currency = () => {
               Users can earn u-coins by sending u-coins to other users.
               Users can spend u-coins by sending u-coins from other users.
             </p>
-            <Accordion className='text-light'>
+            <Accordion className='text-light' flush>
               <Accordion.Item eventKey="0" className='mb-5'>
                 <Accordion.Header>
                   <FaMoneyBill className="me-2" size={30} />
@@ -63,8 +63,12 @@ const Currency = () => {
               </Accordion.Item>
             </Accordion>
           </div>
-          <div className="col-md position-relative">
-            <div className="position-absolute icons-container">
+          <div className="col-md d-md-block">
+          <div className="d-flex align-items-center mb-4 text-light">
+          <FaBitcoin className="me-2" size={24} />
+          <h1 className='text-center mt-5 mb-4'><span className='left-text'>Bank</span> the Way u-Bank</h1>
+        </div>
+            <div className="icons-container">
               <FaBitcoin className="me-2" size={30} />
               <FaMoneyBill className="me-2" size={30} />
               <FaHome className="me-2" size={30} />

@@ -5,8 +5,20 @@
     font-family: "Oxygen", sans-serif;
 }
 
+.header-wrapper{
+    background: linear-gradient(to right, #2c004d, #0d0d26);
+}
+
+.logo-img{
+    width: 2rem;
+    height: 2rem;
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-right: 1rem;
+}
 .u_bank{
-    color: red;
+    color: rgb(255, 235, 15);
 }
 .btn-group{
     font-size: 5rem!important;
@@ -17,7 +29,10 @@
     font-size: 15px;
 
 }
-
+.form-check{
+    background: transparent;
+    border: none;
+}
 .form-header{
     justify-content: space-evenly;
 }

@@ -13,13 +13,20 @@
     --bs-accordion-color: white;
     --bs-accordion-active-color: rgb(73, 8, 250);
     --bs-accordion-btn-focus-box-shadow: none;
-    --bs-accordion-btn-color: white;
+    --bs-accordion-btn-color:
+    
+}
+
+.accordion-button {
+    background-color: var(--bs-accordion-btn-bg)!important;
+    color: var(--bs-accordion-color)!important;
 }
 
 .accordion-button:not(.collapsed) {
     box-shadow: none;
 }
-.accordion-item{
+
+.accordion-item {
     background: #4b0082;
 }
 
@@ -50,9 +57,11 @@
     padding-top: 1rem;
     padding-left: 3rem;
     color: aliceblue;
+    margin-bottom: 1rem; /* Adjust as needed */
 }
 
-.left-text{
+.left-text {
     color: #50c878;
     font-weight: bold;
+    font-size: 3.5rem;
 }

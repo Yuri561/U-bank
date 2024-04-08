@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "exceljs": "^4.4.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "U-bank backend server",
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yuri561/U-bank.git"
+  },
+  "author": "Yuri Pierre-Louis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yuri561/U-bank/issues"
+  },
+  "homepage": "https://github.com/Yuri561/U-bank#readme"
+}
