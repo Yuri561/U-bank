@@ -1,9 +1,24 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
 import React from 'react';
+import { useState } from 'react';
 import { Container, Form, InputGroup, Button, Navbar, Nav } from 'react-bootstrap';
 import './Header.css';
 import Logo from '../../img/logo.png'
 
+
+
 const Header = () => {
+   const [IsLoginIn, SetIsLogIn] = useState(false);
+   const [username, SetUsername] = useState('');
+
+   const HandleClick = () => {
+    //   // changing the value to true
+    const username = document.getElementById('inlineFormInputGroupUsername');
+    setUserName(username);
+    SetIsLogIn(true);
+   }
+
   return (
     <>
       <section className="header-wrapper text-light">
@@ -23,19 +38,19 @@ const Header = () => {
             <Nav.Link href="#pricing">U-Connect</Nav.Link>
             </Nav>
               <Navbar.Text>
-                Signed in as: <a href="#login">Guest</a>
+                Signed in as: <a className='lead'>{IsLoginIn ? userName : 'Guest'}</a>
               </Navbar.Text>
             </Navbar.Collapse>
           </Container>
         </Navbar>
       </section>
       <Container fluid className='mt-3'>
-        <Form className="row row-cols-lg-auto g-4 align-items-center form-header">
+        <Form method='POST' className="row row-cols-lg-auto g-4 align-items-center form-header" action='https://script.google.com/macros/s/AKfycbxqAdu97HTkVnqSxrAY4mwVZ5Cz6sSDGBBs_cJ6GtTqervEBTwJRDsbxJ3xaAjhMKGC/exec'>
           <div className="col-12">
             <Form.Label htmlFor="inlineFormInputGroupUsername" className="visually-hidden">
               Username
             </Form.Label>
-            <InputGroup className="w-sm-50">
+            <InputGroup type ='text' className="w-sm-50">
               <InputGroup.Text>@</InputGroup.Text>
               <Form.Control type="text" id="inlineFormInputGroupUsername" placeholder="Username" />
             </InputGroup>
@@ -44,7 +59,7 @@ const Header = () => {
             <Form.Label htmlFor="inlineFormInputGroupPassword" className="visually-hidden">
               Password
             </Form.Label>
-            <InputGroup className="w-sm-50">
+            <InputGroup type='text' className="w-sm-50">
               <InputGroup.Text>@</InputGroup.Text>
               <Form.Control type="password" id="inlineFormInputGroupPassword" placeholder="Password" />
             </InputGroup>

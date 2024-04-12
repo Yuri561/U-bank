@@ -18,6 +18,7 @@ workbook.xlsx.readFile('../backEnd/auth_excel.xlsx')
             console.log(`Row ${rowNumber}:`);
             row.eachCell((cell, colNumber)=>{
                 console.log(`Column ${colNumber}: ${cell.value}`);
+                
             })
         })
     })
