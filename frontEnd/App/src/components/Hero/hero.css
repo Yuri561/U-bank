@@ -1,46 +1,40 @@
 
+.img {
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 0;
+  border-radius: 1rem;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s ease; /* Add transition for smooth hover effect */
+}
 
-  .text-hero {
-    position: absolute;
-    top:50%;
-    left: 50%;
+.img:hover {
+  box-shadow: 0px 8px 20px rgba(255, 255, 255, 0.5); /* Adjust shadow color and opacity */
+}
 
-    transform: translate(-50%, -50%);
-    color: white; /* Adjust text color as needed */
-    text-align: center;
-    z-index: 1; /* Ensure the text is above the image */
-    padding: 10px 10px 10px 10px;
-    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
-    backdrop-filter: blur(10px); /* Blur effect */
-    font-size: 5rem;
-    font-weight: bold;
-  }
+.container-img{
+  height: 75vh;
+}
 
-
-  
-  .img  {
-    object-fit: cover;
-    width: 100%; /* Set width to 100% of viewport width */
-    height: 39rem; /* Adjust height as needed */
-    position: relative;
-    z-index: 0; /* Ensure the image is behind the text */
-    border-radius: 1rem;
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
-    transition: box-shadow 0.3s ease; /* Add transition for smooth hover effect */
-
-  }
-
-  .img:hover{
-    box-shadow: 0px 8px 20px rgb(255, 255, 255); /* Add transition for smooth hover effect */
-  }
-
-
-  .container-img {
-    height: 80vh; /* Set initial height for smaller screens */
-  }
-  
-.hero-container{
+.hero-container {
   background: linear-gradient(to right, #004466, #001a33);
+}
 
+.card-img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
 
+.card-img-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.card-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
 }

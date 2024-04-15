@@ -23,7 +23,7 @@ const Boxes = () => {
                   Connect to U-account
                 </a>
               </div>
-              <div className="card-footer text-light">2 days ago</div>
+              
             </div>
           </div>
           <div className="col-md">
@@ -41,7 +41,7 @@ const Boxes = () => {
                   Connect to U-auto
                 </a>
               </div>
-              <div className="card-footer text-light">2 days ago</div>
+              
             </div>
           </div>
           <div className="col-md">
@@ -58,7 +58,7 @@ const Boxes = () => {
                   Connect to U-account
                 </a>
               </div>
-              <div className="card-footer text-light">2 days ago</div>
+              
             </div>
           </div>
         </div>
