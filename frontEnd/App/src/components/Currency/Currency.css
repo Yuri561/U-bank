@@ -1,67 +1,27 @@
-.text {
-    color: whitesmoke;
-    font-size: 5rem;
-}
+/* /* Currency.css */
 
-.c-wrapper {
-    background: #1a1a2e;
-}
-
-.accordion {
-    --bs-accordion-btn-bg: #191970;
-    --bs-accordion-bg: #1a1a2e;
-    --bs-accordion-color: white;
-    --bs-accordion-active-color: rgb(73, 8, 250);
-    --bs-accordion-btn-focus-box-shadow: none;
-    --bs-accordion-btn-color:
+  
+  .text-primary {
+    color: #007bff;
+  }
+  
+  .bg-primary {
+    background-color: #007bff;
+  }
+  
+  .bg-primary-dark {
+    background-color: #0056b3;
+  }
+ 
+  .bg-currency{
+    background-image: url('../../img/logo.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
     
-}
+  }
+  .bg-current::before{
+    background-color: limegreen;
+  }
 
-.accordion-button {
-    background-color: var(--bs-accordion-btn-bg)!important;
-    color: var(--bs-accordion-color)!important;
-}
-
-.accordion-button:not(.collapsed) {
-    box-shadow: none;
-}
-
-.accordion-item {
-    background: #4b0082;
-}
-
-.accordion-body {
-    font-size: 1rem;
-    background: white;
-    color: black;
-}
-
-.currency-container {
-    background: linear-gradient(to right, #1a1a2e, #4b0082);
-}
-
-.img-banner {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 2rem;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.icons-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 3rem;
-    padding-top: 1rem;
-    padding-left: 3rem;
-    color: aliceblue;
-    margin-bottom: 1rem; /* Adjust as needed */
-}
-
-.left-text {
-    color: #50c878;
-    font-weight: bold;
-    font-size: 3.5rem;
-}
+  

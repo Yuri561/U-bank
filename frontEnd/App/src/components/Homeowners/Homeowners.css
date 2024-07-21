@@ -1,0 +1,38 @@
+/* Homeowners.css */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background: url('../../img/hero-image.jpg') no-repeat center center;
+  background-size: cover;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.steps-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -20px; /* Adjust as needed to align with the hero section */
+}
+
+.step-box {
+  flex: 1;
+  text-align: center;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.step-box:not(:last-child) {
+  border-right: 1px solid #ddd;
+}
+
+.container {
+  margin-top: 100px; /* Adjust as needed to provide space for the step container */
+}
+
+.container h4 {
+  margin-bottom: 1rem;
+}

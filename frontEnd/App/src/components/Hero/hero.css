@@ -1,40 +1,59 @@
-
-.img {
-  width: 100%;
-  height: auto;
-  position: relative;
-  z-index: 0;
-  border-radius: 1rem;
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
-  transition: box-shadow 0.3s ease; /* Add transition for smooth hover effect */
-}
-
-.img:hover {
-  box-shadow: 0px 8px 20px rgba(255, 255, 255, 0.5); /* Adjust shadow color and opacity */
-}
-
-.container-img{
-  height: 75vh;
-}
-
-.hero-container {
-  background: linear-gradient(to right, #004466, #001a33);
-}
-
-.card-img {
-  object-fit: cover;
+/* hero.css */
+body, html {
   height: 100%;
-  width: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
 
-.card-img-overlay {
-  background-color: rgba(0, 0, 0, 0.5);
+.hero-background {
+  background: url('../../img/realbg.webp') no-repeat center center;
+  background-size: cover;
+  position: relative;
 }
 
-.card-footer {
+.hero-background::before {
+  content: '';
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Dark overlay for better text visibility */
+  z-index: 0;
+}
+
+.container {
+  height: 100%;
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+h1, p {
+  position: relative;
+  z-index: 1;
+}
+
+.text-white {
+  color: #fff !important;
+}
+
+.text-light {
+  color: #d3d3d3 !important;
+}
+
+.btn {
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-outline-light {
+  color: #fff;
+  border-color: #fff;
 }

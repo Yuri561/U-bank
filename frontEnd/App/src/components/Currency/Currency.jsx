@@ -1,86 +1,143 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
-import { Image, Accordion } from 'react-bootstrap';
 import { FaBitcoin, FaMoneyBill, FaCreditCard, FaUniversity, FaHome, FaCar } from 'react-icons/fa'; // Importing React Icons
+import { motion } from 'framer-motion';
 import cBanner from '../../img/cBanner.jpeg';
 import './Currency.css';
 
+const bubbleVariants = {
+  animate: {
+    y: [0, -20, 0],
+    opacity: [0.8, 1, 0.8],
+    transition: {
+      duration: 4,
+      repeat: Infinity,
+      ease: 'easeInOut',
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
+
 const Currency = () => {
   return (
-    <section className='p-5 currency-container'>
-      <div className='container'>
-        <div className='row align-items-center justify-content-space-between'>
-          <div className='col-md p-5 text-light'>
-            <div className="d-flex align-items-center mb-4">
-              <FaBitcoin className="me-2" size={24} />
-              <h1 className='text-center mt-5 mb-4'><span className='left-text'>Redefine</span> the Way u-Coin</h1>
-            </div>
-            <p className='lead'>
-              u-Coin is a cryptocurrency that is used to create a platform that allows users to earn and spend u-coins.
-              Users can earn u-coins by sending u-coins to other users.
-              Users can spend u-coins by sending u-coins from other users.
-            </p>
-            <Accordion className='text-light' flush>
-              <Accordion.Item eventKey="0" className='mb-5'>
-                <Accordion.Header>
-                  <FaMoneyBill className="me-2" size={30} />
-                  Instant Cash Backs
-                </Accordion.Header>
-                <Accordion.Body>
-                  Experience the benefits of banking with U-Bank!
-                  Get rewarded with instant cashbacks on every transaction. 
-                  As a valued customer, enjoy an exclusive 10% cashback on all your purchases, 
-                  whether it's shopping, dining, or paying bills. With U-Bank, your money works harder for you, 
-                  providing unbeatable rewards every step of the way.
-                </Accordion.Body>
-              </Accordion.Item>
-              <Accordion.Item eventKey="1" className='mb-5'>
-                <Accordion.Header>
-                  <FaCreditCard className="me-2" size={30} />
-                  Insane Deposits
-                </Accordion.Header>
-                <Accordion.Body>
-                  With U-Bank's revolutionary deposit system, you can enjoy unparalleled flexibility and benefits.
-                  Deposit your funds with confidence and watch your savings grow with competitive interest rates.
-                  Whether you're saving for a rainy day or planning for your future, U-Bank's deposit solutions
-                  ensure that your money works harder for you. Say goodbye to mediocre returns and hello to
-                  a brighter financial future with U-Bank's insane deposit options.
-                </Accordion.Body>
-              </Accordion.Item>
-              <Accordion.Item eventKey="2">
-                <Accordion.Header>
-                  <FaCreditCard className="me-2" size={30} />
-                  Better Rates
-                </Accordion.Header>
-                <Accordion.Body>
-                Experience the benefits of banking with U-Bank's better rates!
-                With our competitive interest rates, your savings will grow faster.
-                Whether you're saving for a rainy day or planning for your future,
-                U-Bank's deposit solutions ensure that your money works harder for you.
-                Say goodbye to mediocre returns and hello to a brighter financial future
-                with U-Bank's incredible deposit options and better rates.
-                </Accordion.Body>
-              </Accordion.Item>
-            </Accordion>
-          </div>
-          <div className="col-md d-md-block">
-          <div className="d-flex align-items-center mb-4 text-light">
-          <FaBitcoin className="me-2" size={24} />
-          <h1 className='text-center mt-5 mb-4'><span className='left-text'>Bank</span> the Way u-Bank</h1>
-        </div>
-            <div className="icons-container">
-              <FaBitcoin className="me-2" size={30} />
-              <FaMoneyBill className="me-2" size={30} />
-              <FaHome className="me-2" size={30} />
-              <FaCreditCard className="me-2" size={30} />
-              <FaUniversity className="me-2" size={30} />
-              <FaCar className="me-2" size={30} />
-            </div>
-            <Image src={cBanner} className='fluid img-banner' />
-          </div>
-          
-        </div>
+    <section className="p-10 text-white relative overflow-hidden currency-bg bg-blue-800" >
 
+      {/* Bubbles Background */}
+      <div className="absolute inset-0 overflow-hidden">
+        
+        {Array.from({ length: 20 }).map((_, index) => (
+          <motion.div
+            key={index}
+            className="absolute bg-primary rounded-full opacity-50"
+            style={{
+              width: `${Math.random() * 100 + 20}px`,
+              height: `${Math.random() * 100 + 20}px`,
+              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`,
+            }}
+            variants={bubbleVariants}
+            animate="animate"
+          />
+        ))}
+      </div>
+
+      <div className="container mx-auto relative z-10 p-10 bg-currency rounded shadow text-white">
+        <div className="text-center mb-10">
+          <motion.h1
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className="text-4xl md:text-5xl font-bold mb-4"
+          >
+            Why Choose U-Bank?
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.5 }}
+            className="text-lg md:text-xl"
+          >
+            No Maintenance Fees. No Hidden Charges. Just Pure Banking Freedom.
+          </motion.p>
+        </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={cardVariants}
+            className="bg-gray-900 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+          >
+            <FaMoneyBill className="text-primary mb-4" size={40} />
+            <h2 className="text-2xl font-bold mb-3">No Maintenance Fees</h2>
+            <p className="text-gray-400">
+              With U-Bank, you can enjoy all the benefits of modern banking without any maintenance fees. Your money is yours to keep and grow.
+            </p>
+          </motion.div>
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={cardVariants}
+            className="bg-gray-900 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+          >
+            <FaCreditCard className="text-primary mb-4" size={40} />
+            <h2 className="text-2xl font-bold mb-3">No Hidden Charges</h2>
+            <p className="text-gray-400">
+              Transparency is key. U-Bank ensures that you are never surprised by hidden fees. What you see is what you get.
+            </p>
+          </motion.div>
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={cardVariants}
+            className="bg-gray-900 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+          >
+            <FaBitcoin className="text-primary mb-4" size={40} />
+            <h2 className="text-2xl font-bold mb-3">u-Coin Rewards</h2>
+            <p className="text-gray-400">
+              Earn u-Coins with every transaction and enjoy rewards that truly benefit you. Spend and save with confidence.
+            </p>
+          </motion.div>
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={cardVariants}
+            className="bg-gray-900 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+          >
+            <FaUniversity className="text-primary mb-4" size={40} />
+            <h2 className="text-2xl font-bold mb-3">Competitive Rates</h2>
+            <p className="text-gray-400">
+              Experience better savings with U-Bank's competitive interest rates. Your money grows faster here.
+            </p>
+          </motion.div>
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={cardVariants}
+            className="bg-gray-900 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+          >
+            <FaHome className="text-primary mb-4" size={40} />
+            <h2 className="text-2xl font-bold mb-3">Home Loans</h2>
+            <p className="text-gray-400">
+              Get the best deals on home loans with flexible terms and unbeatable rates. Make your dream home a reality with U-Bank.
+            </p>
+          </motion.div>
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={cardVariants}
+            className="bg-gray-900 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+          >
+            <FaCar className="text-primary mb-4" size={40} />
+            <h2 className="text-2xl font-bold mb-3">Car Loans</h2>
+            <p className="text-gray-400">
+              Drive your dream car with our affordable car loans. U-Bank offers flexible financing options tailored to your needs.
+            </p>
+          </motion.div>
+        </div>
       </div>
     </section>
   );

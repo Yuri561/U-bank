@@ -5,8 +5,13 @@
     font-family: "Oxygen", sans-serif;
 }
 
+header{
+    position: fixed !important;
+    width: 100% !important;
+}
+
 .header-wrapper{
-    background: linear-gradient(to right, #2c004d, #0d0d26);
+    background: yellow;
 }
 
 .logo-img{

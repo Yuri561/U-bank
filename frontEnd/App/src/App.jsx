@@ -1,49 +1,42 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Header from "./components/Header/header";
-import Hero from "./components/Hero/hero";
-import Currency from "./components/Currency/Currency";
-import Newsletter from "./components/Newsletter/Newsletter";
-import Boxes from "./components/Boxes/Boxes";
-import Footer from "./components/Footer/Footer";
+import Layout from "./components/Layout/Layout";
+import HomePage from "./components/HomePage/HomePage";
 import Login from "./components/Login/Login";
 import SignUp from "./components/Login/signup";
+import Cards from "./components/Cards/Cards";
+import Homeowners from "./components/Homeowners/Homeowners";
+import Auto from "./components/Auto/Auto";
+import InsurancesAndBenefits from "./components/Insurance&benefits/InsurancesAndBenefits";
+import Cashbacks from "./components/Cashbacks/Cashbacks";
+import Blog from "./components/Blog/Blog";
+import AboutUs from "./components/AboutUs/AboutUs";
+import ContactUs from "./components/ContactUs/ContactUs";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-          {/* Route for the Login component */}
           <Route path="login" element={<Login />} />
-          {/* Route for the SignUp component */}
           <Route path="signup" element={<SignUp />} />
-          {/* Protected route for the home page */}
-          <Route path="/" element={<ProtectedRoute/>} />
+          
+          {/* All routes that require the header and footer */}
+          <Route element={<Layout />}>
+            <Route path="/" element={<HomePage />} />
+            <Route path="cards" element={<Cards />} />
+            <Route path="homeowners" element={<Homeowners />} />
+            <Route path="auto" element={<Auto />} />
+            <Route path="insurances-benefits" element={<InsurancesAndBenefits />} />
+            <Route path="cashbacks" element={<Cashbacks />} />
+            <Route path="blog" element={<Blog />} />
+            <Route path="about-us" element={<AboutUs />} />
+            <Route path="contact-us" element={<ContactUs />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </div>
   );
 }
 
-// Component for the home page
-function HomePage() {
-  return (
-    <>
-      <Header />
-      <Hero />
-      <Currency />
-      <Newsletter />
-      <Boxes />
-      <Footer />
-    </>
-  );
-}
-function ProtectedRoute() {
-  // Check if the user is logged in (you need to implement this logic)
-  const isLoggedIn = true; // Placeholder for demonstration, replace with actual logic
-
-  // If logged in, render the HomePage component, else render the Login component
-  return isLoggedIn ? <HomePage /> : <Login />;
-}
 export default App;
