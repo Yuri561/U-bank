@@ -41,3 +41,12 @@ header{
 .form-header{
     justify-content: space-evenly;
 }
+
+/* header.css */
+#collapseMenu {
+  display: none;
+}
+
+#collapseMenu.show {
+  display: block;
+}
