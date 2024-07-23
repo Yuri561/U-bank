@@ -465,7 +465,7 @@ const stepContent = [
 					alignItems='center'
 					gap={4}>
 					<img
-						src='https://via.placeholder.com/800x400'
+						src={Agent}
 						alt='Real Estate Agent'
 						className='rounded'
 						style={{ maxWidth: '100%' }}
