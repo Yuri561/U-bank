@@ -13,7 +13,7 @@ import Agent from '../../img/agent.jpg'; // Ensure the path is correct
 import Broker from '../../img/broker.jpg'; // Ensure the path is correct
 import Lawyer from '../../img/lawyer.jpg'; // Ensure the path is correct
 import Inspector from '../../img/inspector.jpg'; // Ensure the path is correct
-import './Homeowners.css';
+import './Homeowners.css'; // Import the CSS file for bubbles
 
 const HeroSection = styled(Box)(({ theme }) => ({
 	position: 'relative',
@@ -53,8 +53,8 @@ const StepsContainer = styled(Paper)(({ theme }) => ({
 	left: '50%',
 	transform: 'translateX(-50%)',
 	width: '90%',
-  padding: theme.spacing(2), 
-  marginBottom: '23rem',
+	padding: theme.spacing(2),
+	marginBottom: '23rem',
 	display: 'flex',
 	justifyContent: 'space-between',
 	background: 'linear-gradient(to bottom, #a8c0ff, #3f2b96)',
@@ -119,7 +119,7 @@ const stepContent = [
 	{
 		title: 'What can you afford',
 		content: (
-			<Box className='p-6 mx-auto flex flex-col justify-center items-center bg-white rounded shadow my-3'>
+			<Box className='p-6 mx-auto flex flex-col justify-center items-center bg-yellow-500 rounded shadow my-3'>
 				<Typography variant='h2'>Understanding Your Budget</Typography>
 				<Box
 					my={4}
@@ -145,6 +145,7 @@ const stepContent = [
 					display='flex'
 					flexDirection='column'
 					alignItems='center'
+					className='bg-yellow-500'
 					gap={4}
 					p={2}
 					sx={{ border: '2px solid black' }}
@@ -179,7 +180,7 @@ const stepContent = [
 	{
 		title: 'Down payment and PMI',
 		content: (
-			<Box p={3} className='bg-white rounded shadow my-3'>
+			<Box p={3} className='bg-yellow-500 rounded shadow my-3'>
 				<Typography variant='h2' gutterBottom>
 					Saving for a Down Payment
 				</Typography>
@@ -210,7 +211,8 @@ const stepContent = [
 					gap={4}
 					p={2}
 					sx={{ border: '2px solid black' }}
-					borderRadius={10}>
+					borderRadius={10}
+					className='bg-yellow-500'>
 					<Box className='flex flex-col p-4 my-3'>
 						<Typography variant='body2' className='my-5'>
 							Saving for a down payment requires disciplined budgeting and
@@ -240,7 +242,8 @@ const stepContent = [
 					gap={4}
 					p={2}
 					sx={{ border: '2px solid black' }}
-					borderRadius={10}>
+					borderRadius={10}
+					className='bg-yellow-500'>
 					<Box className='flex flex-col p-4 my-3'>
 						<Typography variant='body2' className='my-5'>
 							Explore various investment options that can help grow your
@@ -271,7 +274,7 @@ const stepContent = [
 	{
 		title: 'Find your team',
 		content: (
-			<Box p={3} className='bg-white rounded shadow my-3'>
+			<Box p={3} className='bg-yellow-500 rounded shadow my-3'>
 				<Typography variant='h2' gutterBottom>
 					Building Your Home Buying Team
 				</Typography>
@@ -429,7 +432,7 @@ const stepContent = [
 	{
 		title: 'Finding the right home',
 		content: (
-			<Box p={3} className='bg-white rounded shadow my-3'>
+			<Box p={3} className='bg-yellow-500 rounded shadow my-3'>
 				<Typography variant='h2' gutterBottom>
 					Finding the Right Home
 				</Typography>
@@ -637,6 +640,18 @@ function Homeowners() {
 			<Container>
 				<Box mt={isMobile ? 4 : 8}>{stepContent[activeStep].content}</Box>
 			</Container>
+			<div className='bubbles'>
+				<div className='bubble' style={{ '--i': 1 }}></div>
+				<div className='bubble' style={{ '--i': 2 }}></div>
+				<div className='bubble' style={{ '--i': 3 }}></div>
+				<div className='bubble' style={{ '--i': 4 }}></div>
+				<div className='bubble' style={{ '--i': 5 }}></div>
+				<div className='bubble' style={{ '--i': 6 }}></div>
+				<div className='bubble' style={{ '--i': 7 }}></div>
+				<div className='bubble' style={{ '--i': 8 }}></div>
+				<div className='bubble' style={{ '--i': 9 }}></div>
+				<div className='bubble' style={{ '--i': 10 }}></div>
+			</div>
 		</div>
 	);
 }

@@ -1,52 +1,89 @@
-*{
-    box-sizing: border-box;
-    margin: 0%;
-    padding: 0%;
-    font-family: "Oxygen", sans-serif;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Oxygen", sans-serif;
 }
 
-header{
-    position: fixed !important;
-    width: 100% !important;
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(90deg, #001f3f, #ff7e5f, #feb47b, #001f3f);
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 1000; /* Ensure the header is on top */
 }
 
-.header-wrapper{
-    background: yellow;
+.logo-img {
+  width: 70px;
+  height: 70px;
+  margin-right: 1rem;
 }
 
-.logo-img{
-    width: 2rem;
-    height: 2rem;
-    margin-left: 1rem;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    margin-right: 1rem;
-}
-.u_bank{
-    color: rgb(255, 235, 15);
-}
-.btn-group{
-    font-size: 5rem!important;
-}
-.btn-group, .btn-group:hover {
-    background-color: transparent;
-    color: #fff;
-    font-size: 15px;
-
-}
-.form-check{
-    background: transparent;
-    border: none;
-}
-.form-header{
-    justify-content: space-evenly;
+.menu-toggle {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
 }
 
-/* header.css */
-#collapseMenu {
-  display: none;
+.menu-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #444;
+  transition: max-height 0.3s ease;
+  max-height: 0;
+  overflow: hidden;
+  z-index: 1000; /* Ensure the menu is on top */
 }
 
-#collapseMenu.show {
-  display: block;
+.menu-links.show {
+  max-height: 300px; /* Adjust this value based on the number of items */
+}
+
+.menu-item {
+  margin: 1rem 0;
+}
+
+.menu-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.menu-link:hover,
+.menu-item.active .menu-link {
+  color: #f90;
+}
+
+.menu-icon {
+  margin-right: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .menu-links {
+    flex-direction: row;
+    position: static;
+    max-height: none;
+    background: none;
+  }
+  .menu-item {
+    margin: 0 1rem;
+  }
+  .menu-toggle {
+    display: none;
+  }
 }

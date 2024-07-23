@@ -1,20 +1,50 @@
 .card-section {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.card-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@-webkit-keyframes scroll {
+  from {
+    transform: translateX(100%);
   }
-  
-  .card-section.visible {
-    opacity: 1;
-    transform: translateY(0);
+  to {
+    transform: translateX(-100%);
   }
-  
-  @keyframes scroll {
-    from {
-      transform: translateX(100%);
-    }
-    to {
-      transform: translateX(-100%);
-    }
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(100%);
   }
-  
+  to {
+    transform: translateX(-100%);
+  }
+}
+.animate-marquee {
+  -webkit-animation: marquee 15s linear infinite;
+          animation: marquee 15s linear infinite;
+}
+
+@-webkit-keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

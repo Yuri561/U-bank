@@ -49,7 +49,19 @@
 }
 .bubble {
   position: absolute;
-  animation: bubble 20s linear infinite;
+  -webkit-animation: bubble 20s linear infinite;
+          animation: bubble 20s linear infinite;
+}
+
+@-webkit-keyframes bubble {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) scale(1.5);
+    opacity: 0;
+  }
 }
 
 @keyframes bubble {
@@ -64,7 +76,17 @@
 }
 
 .animate-marquee {
-  animation: marquee 10s linear infinite;
+  -webkit-animation: marquee 10s linear infinite;
+          animation: marquee 10s linear infinite;
+}
+
+@-webkit-keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 @keyframes marquee {
