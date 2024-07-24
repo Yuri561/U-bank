@@ -5,7 +5,7 @@ import { Disclosure } from "@headlessui/react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import './Boxes.css';
-import cBanner from '../../img/withdrawl.jpg';
+import cBanner from '../../img/banking-tech.jpg';
 
 const reviews = [
   {

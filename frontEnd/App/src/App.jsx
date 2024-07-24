@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout/Layout";
@@ -10,7 +11,7 @@ import Auto from "./components/Auto/Auto";
 import InsurancesAndBenefits from "./components/Insurance&benefits/InsurancesAndBenefits";
 import Cashbacks from "./components/Cashbacks/Cashbacks";
 import Blog from "./components/Blog/Blog";
-import AboutUs from "./components/AboutUs/AboutUs";
+import Account from "./components/Account/Account";
 import ContactUs from "./components/ContactUs/ContactUs";
 
 function App() {
@@ -30,7 +31,7 @@ function App() {
             <Route path="insurances-benefits" element={<InsurancesAndBenefits />} />
             <Route path="cashbacks" element={<Cashbacks />} />
             <Route path="blog" element={<Blog />} />
-            <Route path="about-us" element={<AboutUs />} />
+            <Route path="account" element={<Account />} />
             <Route path="contact-us" element={<ContactUs />} />
           </Route>
         </Routes>

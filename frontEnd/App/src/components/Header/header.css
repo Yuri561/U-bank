@@ -41,7 +41,7 @@
   top: 100%;
   left: 0;
   right: 0;
-  background: #444;
+  background:  #001f3f;
   transition: max-height 0.3s ease;
   max-height: 0;
   overflow: hidden;
@@ -49,7 +49,7 @@
 }
 
 .menu-links.show {
-  max-height: 300px; /* Adjust this value based on the number of items */
+  max-height: 680px; /* Adjust this value based on the number of items */
 }
 
 .menu-item {
@@ -59,7 +59,7 @@
 .menu-link {
   color: #fff;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1rem;
   display: flex;
   align-items: center;
 }

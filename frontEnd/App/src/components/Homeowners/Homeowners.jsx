@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/no-unescaped-entities */
 import React, { useState } from 'react';
 import { Container, Box, Typography, Paper, Grid } from '@mui/material';
 import { styled, useTheme } from '@mui/material/styles';
@@ -621,14 +623,16 @@ function Homeowners() {
 	const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
 	return (
+		
 		<div>
 			<HeroSection />
-			<StepsContainer elevation={3}>
+			<StepsContainer elevation={3} >
 				{stepHeader.map((step, index) => (
 					<StepBox
 						key={index}
 						onClick={() => setActiveStep(index)}
-						active={activeStep === index ? 'true' : 'false'}>
+						active={activeStep === index ? 'true' : 'false'}
+						className='max-w-8xl'>
 						<Typography variant='h6' sx={{ fontSize: '0.75rem' }}>
 							STEP {index + 1}
 						</Typography>
@@ -640,18 +644,7 @@ function Homeowners() {
 			<Container>
 				<Box mt={isMobile ? 4 : 8}>{stepContent[activeStep].content}</Box>
 			</Container>
-			<div className='bubbles'>
-				<div className='bubble' style={{ '--i': 1 }}></div>
-				<div className='bubble' style={{ '--i': 2 }}></div>
-				<div className='bubble' style={{ '--i': 3 }}></div>
-				<div className='bubble' style={{ '--i': 4 }}></div>
-				<div className='bubble' style={{ '--i': 5 }}></div>
-				<div className='bubble' style={{ '--i': 6 }}></div>
-				<div className='bubble' style={{ '--i': 7 }}></div>
-				<div className='bubble' style={{ '--i': 8 }}></div>
-				<div className='bubble' style={{ '--i': 9 }}></div>
-				<div className='bubble' style={{ '--i': 10 }}></div>
-			</div>
+			
 		</div>
 	);
 }

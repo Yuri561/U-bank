@@ -1,3 +1,5 @@
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable no-unused-vars */
 import React, { useEffect } from 'react';
 import {
 	Container,
@@ -28,14 +30,6 @@ const FullWidthContainer = styled(Container)(({ theme }) => ({
 	width: '100%',
 	padding: theme.spacing(3),
 	maxWidth: 'xl',
-}));
-
-const OverlayText = styled(Typography)(({ theme }) => ({
-	fontSize: '3em',
-	textAlign: 'center',
-	color: '#fff',
-	marginBottom: theme.spacing(5),
-	textShadow: '2px 2px 4px rgba(0,0,0,0.3)',
 }));
 
 const MarqueeSection = styled(Box)(({ theme }) => ({
@@ -84,9 +78,32 @@ function Cards() {
 	}, []);
 
 	return (
-		<FullWidthContainer maxWidth='xl'>
-			<OverlayText variant='h1'>Welcome to U-Bank</OverlayText>
-			<Box className='cards-content'>
+		<FullWidthContainer maxWidth='xxl'>
+			<div className='bg-gray-900 text-white py-5 px-8 font-sans mt-12 rounded-lg'>
+				<div className='container max-w-9xl mx-auto flex flex-col md:flex-row justify-between items-center gap-x-6 gap-y-8'>
+					<div className='md:w-1/2 text-center md:text-left'>
+						<h2 className='text-3xl font-semibold mb-4'>
+							Empower Your Financial Journey
+						</h2>
+						<p className='text-base text-gray-300'>
+							Unlock the benefits of U-bank’s diverse card options. Whether
+							you're looking for a credit card with rewards, a debit card for
+							daily transactions, or a youth card to start building your
+							financial future, we've got you covered.
+						</p>
+					</div>
+
+					<div className='md:w-1/2 flex justify-center'>
+						<button
+							type='button'
+							className='bg-yellow-400 text-gray-800 py-3 px-6 font-semibold rounded'>
+							Explore U-bank Cards
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<Box className='cards-content mt-20'>
 				<CardSection className='card-section'>
 					<Typography
 						variant='h2'
@@ -118,7 +135,7 @@ function Cards() {
 						<Grid item xs={12} sm={6} md={4}>
 							<Card>
 								<CardContent>
-									<Typography variant='h5'>Deal 1</Typography>
+									<Typography variant='h5'>Electronics Savings</Typography>
 									<Typography>
 										Get 20% off on all electronics. Limited time offer!
 									</Typography>
@@ -128,7 +145,7 @@ function Cards() {
 						<Grid item xs={12} sm={6} md={4}>
 							<Card>
 								<CardContent>
-									<Typography variant='h5'>Deal 2</Typography>
+									<Typography variant='h5'>Fashion Savings</Typography>
 									<Typography>
 										Buy one, get one free on select fashion items.
 									</Typography>
@@ -138,7 +155,7 @@ function Cards() {
 						<Grid item xs={12} sm={6} md={4}>
 							<Card>
 								<CardContent>
-									<Typography variant='h5'>Deal 3</Typography>
+									<Typography variant='h5'>Grocery Savings</Typography>
 									<Typography>Save 15% on your first grocery order.</Typography>
 								</CardContent>
 							</Card>
@@ -146,7 +163,7 @@ function Cards() {
 						<Grid item xs={12} sm={6} md={4}>
 							<Card>
 								<CardContent>
-									<Typography variant='h5'>Deal 4</Typography>
+									<Typography variant='h5'>Appliance Savings</Typography>
 									<Typography>Exclusive 30% off on home appliances.</Typography>
 								</CardContent>
 							</Card>
@@ -154,7 +171,7 @@ function Cards() {
 						<Grid item xs={12} sm={6} md={4}>
 							<Card>
 								<CardContent>
-									<Typography variant='h5'>Deal 5</Typography>
+									<Typography variant='h5'>Beauty Savings</Typography>
 									<Typography>
 										Special 25% discount on all beauty products.
 									</Typography>
@@ -193,7 +210,7 @@ function Cards() {
 						<Grid item xs={12} sm={6} md={4}>
 							<Card>
 								<CardContent>
-									<Typography variant='h5'>Offer 1</Typography>
+									<Typography variant='h5'>Cashbacks</Typography>
 									<Typography>
 										Exclusive 5% cashback on all dining transactions.
 									</Typography>
@@ -203,7 +220,7 @@ function Cards() {
 						<Grid item xs={12} sm={6} md={4}>
 							<Card>
 								<CardContent>
-									<Typography variant='h5'>Offer 2</Typography>
+									<Typography variant='h5'>Travel Deals</Typography>
 									<Typography>
 										Special 10% discount on travel bookings.
 									</Typography>
@@ -213,7 +230,7 @@ function Cards() {
 						<Grid item xs={12} sm={6} md={4}>
 							<Card>
 								<CardContent>
-									<Typography variant='h5'>Offer 3</Typography>
+									<Typography variant='h5'>U-bank's Special</Typography>
 									<Typography>
 										Members-only early access to sales and events.
 									</Typography>
@@ -223,7 +240,7 @@ function Cards() {
 						<Grid item xs={12} sm={6} md={4}>
 							<Card>
 								<CardContent>
-									<Typography variant='h5'>Offer 4</Typography>
+									<Typography variant='h5'>Online Deals</Typography>
 									<Typography>
 										15% off on your first online purchase.
 									</Typography>
@@ -233,7 +250,7 @@ function Cards() {
 						<Grid item xs={12} sm={6} md={4}>
 							<Card>
 								<CardContent>
-									<Typography variant='h5'>Offer 5</Typography>
+									<Typography variant='h5'>Holiday Deals</Typography>
 									<Typography>
 										Exclusive savings on holiday packages.
 									</Typography>
@@ -476,12 +493,11 @@ function Cards() {
 						</Grid>
 					</Grid>
 				</CardSection>
-				<div className= 'animate-marquee space-x-8'>
-          <div className='p-4 bg-white rounded hover:shadow-yellow-500'>
-           
-          U-Bank: Unlock Your Financial Freedom Get unlimited access to our exclusive offers, savings, and rewards. Discover
-       the best deals and save money on your next purchase.
-      
+				<div className='animate-marquee space-x-8'>
+					<div className='p-4 bg-white rounded hover:shadow-yellow-500'>
+						U-Bank: Unlock Your Financial Freedom Get unlimited access to our
+						exclusive offers, savings, and rewards. Discover the best deals and
+						save money on your next purchase.
 					</div>
 				</div>
 			</Box>

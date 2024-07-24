@@ -25,24 +25,24 @@ const cardVariants = {
 const Currency = () => {
   return (
 		<section className='p-10 text-white relative overflow-hidden currency-bg bg-blue-800'>
-			{/* Bubbles Background */}
-			<div className='absolute inset-0 overflow-hidden'>
-				{Array.from({ length: 20 }).map((_, index) => (
-					<motion.div
-						key={index}
-						className='absolute bg-primary rounded-full opacity-50'
-						style={{
-							width: `${Math.random() * 100 + 20}px`,
-							height: `${Math.random() * 100 + 20}px`,
-							top: `${Math.random() * 100}%`,
-							left: `${Math.random() * 100}%`,
-						}}
-						variants={bubbleVariants}
-						animate='animate'
-					/>
-				))}
-			</div>
-
+		
+		{/* Bubbles Background */}
+		<div className='absolute inset-0 overflow-hidden'>
+			{Array.from({ length: 20 }).map((_, index) => (
+				<motion.div
+					key={index}
+					className='absolute bg-primary rounded-full opacity-50'
+					style={{
+						width: `${Math.random() * 100 + 20}px`,
+						height: `${Math.random() * 100 + 20}px`,
+						top: `${Math.random() * 100}%`,
+						left: `${Math.random() * 100}%`,
+					}}
+					variants={bubbleVariants}
+					animate='animate'
+				/>
+			))}
+		</div>
 			<div className='container mx-auto relative z-10 p-10 bg-currency rounded shadow text-white'>
 				<div className='text-center mb-10'>
 					<motion.h1

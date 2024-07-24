@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import {
 	FaBars,
@@ -7,7 +8,7 @@ import {
 	FaHouseUser,
 	FaCar,
 	FaShieldAlt,
-	FaMoneyCheckAlt,
+	FaPersonBooth,
 	FaBlog,
 	FaInfoCircle,
 	FaEnvelope,
@@ -33,15 +34,15 @@ const Header = () => {
 			text: 'Insurances & Benefits',
 			icon: <FaShieldAlt />,
 		},
-		{ link: '/cashbacks', text: 'Cashbacks', icon: <FaMoneyCheckAlt /> },
+
 		{ link: '/blog', text: 'Blog', icon: <FaBlog /> },
-		{ link: '/about-us', text: 'About', icon: <FaInfoCircle /> },
+		{ link: '/account', text: 'Account', icon: <FaPersonBooth /> },
 		{ link: '/contact-us', text: 'Contact Us', icon: <FaEnvelope /> },
 	];
 
 	return (
-		<nav className='nav bg-yellow-500'>
-			<div className='flex items-center'>
+		<nav className='nav bg-yellow-500 h-[55px]'>
+			<div className='flex items-center sm: gap-[15rem]'>
 				<img src={Logo} alt='Logo' className='logo-img w-30 h-30' />
 				<button className='menu-toggle' onClick={toggle}>
 					{isOpen ? (

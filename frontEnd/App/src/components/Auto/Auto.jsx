@@ -1,10 +1,8 @@
-import React from 'react';
-import './Auto.css';
 const Auto = () => {
-  return (
+	return (
 		<div className='py-12'>
-			<div className='min-h-[400px] bg-gradient-to-b from-blue-900 via-blue-800 to-blue-500 px-6 py-10 sm:py-20 mb-12 font-[sans-serif] text-white'>
-				<div className='max-w-screen-xl mx-auto text-center text-white sm-mt-7-important'>
+			<div className='min-h-[400px]  bg-gradient-to-b from-blue-900 via-blue-800 to-blue-500 px-6 py-10 sm:py-20 mb-12 font-[sans-serif] text-white'>
+				<div className='max-w-screen-xl mx-auto my-5 text-center text-white sm-mt-7-important'>
 					<h1 className='text-5xl max-sm:text-3xl font-extrabold leading-tight mb-6'>
 						Auto Financing made Easy
 					</h1>
@@ -77,15 +75,40 @@ const Auto = () => {
 						xmlns='http://www.w3.org/2000/svg'
 						fill='#007bff'
 						className='w-10 h-10 mb-4 inline-block bg-white p-2 rounded-md'
-						viewBox='0 0 512.001 512.001'>
+						viewBox='0 0 24 24'>
 						<path
-							d='M271.029 0c-33.091 0-61 27.909-61 61s27.909 61 61 61 60-27.909 60-61-26.909-61-60-61zm66.592 122c-16.485 18.279-40.096 30-66.592 30-26.496 0-51.107-11.721-67.592-30-14.392 15.959-23.408 36.866-23.408 60v15c0 8.291 6.709 15 15 15h151c8.291 0 15-6.709 15-15v-15c0-23.134-9.016-44.041-23.408-60zM144.946 460.404 68.505 307.149c-7.381-14.799-25.345-20.834-40.162-13.493l-19.979 9.897c-7.439 3.689-10.466 12.73-6.753 20.156l90 180c3.701 7.423 12.704 10.377 20.083 6.738l19.722-9.771c14.875-7.368 20.938-25.417 13.53-40.272zM499.73 247.7c-12.301-9-29.401-7.2-39.6 3.9l-82 100.8c-5.7 6-16.5 9.6-22.2 9.6h-69.901c-8.401 0-15-6.599-15-15s6.599-15 15-15h60c16.5 0 30-13.5 30-30s-13.5-30-30-30h-78.6c-7.476 0-11.204-4.741-17.1-9.901-23.209-20.885-57.949-30.947-93.119-22.795-19.528 4.526-32.697 12.415-46.053 22.993l-.445-.361-21.696 19.094L174.28 452h171.749c28.2 0 55.201-13.5 72.001-36l87.999-126c9.9-13.201 7.2-32.399-6.299-42.3z'
+							d='M22.25 0H1.75A1.753 1.753 0 0 0 0 1.75v20.5C0 23.216.784 24 1.75 24h20.5c.966 0 1.75-.784 1.75-1.75V1.75C24 .784 23.216 0 22.25 0zM22 22H2V6h20z'
 							data-original='#000000'
 						/>
 					</svg>
-					<h3 className='text-lg font-bold mb-2 text-gray-800'>Support</h3>
+					<h3 className='text-lg font-bold mb-2 text-gray-800'>
+						Convenient Payment Terms
+					</h3>
 					<p className='text-sm text-gray-600'>
-						24/7 customer support for all your inquiries.
+						Choose your terms, between 12 months to 60 months
+					</p>
+					<a
+						href='javascript:void(0);'
+						className='text-blue-600 font-bold inline-block text-sm mt-4 hover:underline'>
+						Learn more
+					</a>
+				</div>
+				<div className='bg-gray-100 p-6 rounded-md shadow-lg transition-transform transform hover:scale-105'>
+					<svg
+						xmlns='http://www.w3.org/2000/svg'
+						fill='#007bff'
+						className='w-10 h-10 mb-4 inline-block bg-white p-2 rounded-md'
+						viewBox='0 0 32 32'>
+						<path
+							d='M16 1C7.72 1 1 7.72 1 16s6.72 15 15 15 15-6.72 15-15S24.28 1 16 1zm.87 21.87v.74h-1.74v-.76c-2.95-.14-5.03-1.46-5.24-3.38h2.5c.19.72 1.15 1.46 2.73 1.46 1.58 0 2.18-.72 2.18-1.46 0-.72-.52-1.22-2.16-1.6l-.36-.1c-2.24-.53-3.56-1.36-3.56-3.08 0-1.53 1.2-2.75 3.27-3.1v-.74h1.74v.76c2.21.19 4.12 1.24 4.36 3.23h-2.53c-.21-.72-.98-1.22-2.12-1.22s-2.03.48-2.03 1.33c0 .62.48.96 1.71 1.27l.34.1c2.53.61 4.08 1.48 4.08 3.31-.02 1.63-1.22 2.88-3.33 3.16z'
+							data-original='#000000'
+						/>
+					</svg>
+					<h3 className='text-lg font-bold mb-2 text-gray-800'>
+						Fixed Low Rates
+					</h3>
+					<p className='text-sm text-gray-600'>
+						Our loan rates are fixed and among the lowest in the country
 					</p>
 					<a
 						href='javascript:void(0);'
@@ -99,66 +122,14 @@ const Auto = () => {
 						fill='#007bff'
 						className='w-10 h-10 mb-4 inline-block bg-white p-2 rounded-md'
 						viewBox='0 0 24 24'>
-						<g fillRule='evenodd' clipRule='evenodd'>
-							<path
-								d='M17.03 8.97a.75.75 0 0 1 0 1.06l-4.2 4.2a.75.75 0 0 1-1.154-.114l-1.093-1.639L8.03 15.03a.75.75 0 0 1-1.06-1.06l3.2-3.2a.75.75 0 0 1 1.154.114l1.093 1.639L15.97 8.97a.75.75 0 0 1 1.06 0z'
-								data-original='#000000'
-							/>
-							<path
-								d='M13.75 9.5a.75.75 0 0 1 .75-.75h2a.75.75 0 0 1 .75.75v2a.75.75 0 0 1-1.5 0v-1.25H14.5a.75.75 0 0 1-.75-.75z'
-								data-original='#000000'
-							/>
-							<path
-								d='M3.095 3.095C4.429 1.76 6.426 1.25 9 1.25h6c2.574 0 4.57.51 5.905 1.845C22.24 4.429 22.75 6.426 22.75 9v6c0 2.574-.51 4.57-1.845 5.905C19.571 22.24 17.574 22.75 15 22.75H9c-2.574 0-4.57-.51-5.905-1.845C1.76 19.571 1.25 17.574 1.25 15V9c0-2.574.51-4.57 1.845-5.905zm1.06 1.06C3.24 5.071 2.75 6.574 2.75 9v6c0 2.426.49 3.93 1.405 4.845.916.915 2.419 1.405 4.845 1.405h6c2.426 0 3.93-.49 4.845-1.405.915-.916 1.405-2.419 1.405-4.845V9c0-2.426-.49-3.93-1.405-4.845C18.929 3.24 17.426 2.75 15 2.75H9c-2.426 0-3.93.49-4.845 1.405z'
-								data-original='#000000'
-							/>
-						</g>
+						<path
+							d='M16.996 4.437a1.44 1.44 0 0 0-1.363-1.447h-3.218c-4.86 0-8.747 3.548-9.481 8.204a9.55 9.55 0 0 0-.077 1.225c0 4.958 3.759 8.735 8.39 8.735h2.183c4.635 0 8.394-3.777 8.394-8.735v-2.575a1.44 1.44 0 0 0-1.43-1.447h-7.262c-.37 0-.699-.268-.743-.635a.72.72 0 0 1 .714-.807h4.778c.396 0 .717-.33.717-.736v-1.782z'
+							data-original='#000000'
+						/>
 					</svg>
-					<h3 className='text-lg font-bold mb-2 text-gray-800'>Performance</h3>
+					<h3 className='text-lg font-bold mb-2 text-gray-800'>Pre-Approval</h3>
 					<p className='text-sm text-gray-600'>
-						Experience blazing-fast performance with our product.
-					</p>
-					<a
-						href='javascript:void(0);'
-						className='text-blue-600 font-bold inline-block text-sm mt-4 hover:underline'>
-						Learn more
-					</a>
-				</div>
-				<div className='bg-gray-100 p-6 rounded-md shadow-lg transition-transform transform hover:scale-105'>
-					<svg
-						xmlns='http://www.w3.org/2000/svg'
-						fill='#007bff'
-						className='w-10 h-10 mb-4 inline-block bg-white p-2 rounded-md'
-						viewBox='0 0 682.667 682.667'>
-						<defs>
-							<clipPath id='a' clipPathUnits='userSpaceOnUse'>
-								<path d='M0 512h512V0H0Z' data-original='#000000' />
-							</clipPath>
-						</defs>
-						<g
-							fill='none'
-							stroke='#007bff'
-							strokeLinecap='round'
-							strokeLinejoin='round'
-							strokeMiterlimit='10'
-							strokeWidth='40'
-							clipPath='url(#a)'
-							transform='matrix(1.33 0 -1.33 0 682.667)'>
-							<path
-								d='M256 492 60 410.623v-98.925C60 183.674 137.469 68.38 256 20c118.53 48.38 196 163.674 196 291.698v98.925z'
-								data-original='#000000'
-							/>
-							<path
-								d='M178 271.894 233.894 216 334 316.105'
-								data-original='#000000'
-							/>
-						</g>
-					</svg>
-					<h3 className='text-lg font-bold mb-2 text-gray-800'>
-						Zero Credit Check
-					</h3>
-					<p className='text-sm text-gray-600'>
-						With U-bank we help build your credit by not touching your credit
+						Check if you qualify in minutes without affecting your credit score
 					</p>
 					<a
 						href='javascript:void(0);'
@@ -169,6 +140,6 @@ const Auto = () => {
 			</div>
 		</div>
 	);
-}
+};
 
 export default Auto;
